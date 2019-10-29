@@ -1,14 +1,15 @@
 <?php
-//comprobamos usuario  y contraseña (no se hacer para que distinga entre adm y usr)
+//comprobamos usuario  y contraseÃ±a (no se hacer para que distinga entre adm y usr)
 if ($_POST["usuario"]=="usuario" && $_POST["contrasena"]=="usuario"){
-//usuario y contraseña válidos de adm
+//usuario y contraseÃ±a vÃ¡lidos de adm
 //creamos una sesion
 $_SESSION["autenticado"]= "SI";
 header ("Location: aplicacion.php");
 }
 
+
 if ($_POST["usuario"]=="usuario" && $_POST["contrasena"]=="usuario"){
-//usuario y contraseña válidos de usr
+//usuario y contraseÃ±a vÃ¡lidos de usr
 //creamos una sesion
 $_SESSION["autenticado"]= "SI";
 header ("Location: aplicacion.php");
