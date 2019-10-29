@@ -1,11 +1,12 @@
 <?php
-//Inicio la sesión
+//Inicio la sesiÃ³n
 session_start();
 //COMPRUEBA QUE EL USUARIO ESTA AUTENTICADO
 if ($_SESSION["autenticado"] != "SI") {
-//si no existe, va a la página de autenticacion
+//si no existe, va a la pÃ¡gina de autenticacion
 header("Location: login.php");
 //salimos de este script
 exit();
 }
+
 ?>
