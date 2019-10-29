@@ -2,12 +2,13 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Aplicación segura</title>
+<title>AplicaciÃ³n segura</title>
 </head>
 <body>
 <h1>Has accedido</h1>
 <br>
 <br>
-<p>Esta sección es exclusiva para registrados.
+<p>Esta secciÃ³n es exclusiva para registrados.
+  
 </body>
 </html>
