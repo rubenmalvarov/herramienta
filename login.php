@@ -3,7 +3,7 @@
 <title>Autenticaci&oacute;n PHP</title>
 </head>
 <body>
-<h1>Formulario de autenticacion</h1>
+<h1>Formulario de autenticaci&oacute;n</h1>
 <form action="autenticacion.php" method="POST">
 <table border="0">
 <tr><td>Nombre de usuario:</td><td><input name="usuario" size="25" value=""/></td></tr>
