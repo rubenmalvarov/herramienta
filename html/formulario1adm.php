@@ -1,16 +1,36 @@
-<?include ("bloquedeseguridad.php");?>
-<html>
-<head>
-<meta charset="utf-8">
-<title>formulario1adm</title>
-</head>
-<body>
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>NukeTrack Administrador</title>
+	 <meta charset="UTF-8">
+
+
+    <!-- Aqui acceso al framework de W3School y a nuestro propio CSS -->
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="css/estilo.css">
+  </head>
+
 <h1>Esta sección es exclusiva para administradores.</h1>
+  
+  <br>
+  
+  <div class="w3-container w3-deep-orange w3-center">
   <a href="crearincidencia.php">Nueva incidencia</a>
+  </div>
+  
+  <br>
+  
+  <div class="w3-container w3-deep-orange w3-center">
   <a href="consultaincidenciaadm.php">Consultar incidencia</a>
+  </div>
+  
+  <br>
+  <div class="w3-container w3-deep-orange w3-center">
   <a href="basedeconocimientos.php">Base de conocimientos</a>
+  <br>
   <a href="administracionusuarios.php">Administracion de usuarios</a>
 <br>
 <br>
-</body>
+
 </html>
