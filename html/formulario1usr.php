@@ -1,3 +1,5 @@
+
+<!doctype html>
 <html lang="es">
   <head>
     <title>NukeTrack Administrador</title>
@@ -7,17 +9,36 @@
     <!-- Aqui acceso al framework de W3School y a nuestro propio CSS -->
 	<link rel="stylesheet" href="css/w3.css">
 	<link rel="stylesheet" href="css/estilo.css">
-  </head>
-    
-      <div class="w3-container w3-center">    
-         <!-- Imagen y logo -->
-	<img src="imagenes/logo.png" class="w3-circle" alt="NukeTrack Logo">
+ </head>
+   
+    <!-- Imagen y logo -->
+    <div class="w3-container w3-center">  
+	   <img src="imagenes/logo.png" class="w3-circle" alt="NukeTrack Logo">
     </div>
-<body>
-<h1>Esta sección es exclusiva para usuarios.</h1>
-  <a href="crearincidencia.php">Nueva incidencia</a>
-  <a href="consultaincidenciausr.php">Seguimiento de tus incidencias</a>
-<br>
-<br>
-</body>
+    
+    <br>
+    
+    <div class="w3-container w3-deep-orange w3-center">
+		<h2>Usuario administrador</h2>
+    </div>
+    
+    <br>
+    
+    <div class="w3-container w3-center">
+        <button class="w3-btn w3-deep-orange">
+        <a href="crearincidencia.php">Nueva incidencia</a>
+        </button>
+    </div>
+    
+    <br>
+    
+    <div class="w3-container w3-center">
+        <button class="w3-btn w3-deep-orange">
+        <a href="consultaincidenciausr.php">Consultar incidencia</a>
+        </button>
+    </div>
+  
+     <br>
+    
+
 </html>
