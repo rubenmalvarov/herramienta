@@ -1,5 +1,4 @@
 
-<!doctype html>
 <html lang="es">
   <head>
     <title>NukeTrack Administrador</title>
@@ -10,6 +9,11 @@
 	<link rel="stylesheet" href="css/w3.css">
 	<link rel="stylesheet" href="css/estilo.css">
   </head>
+    
+      <div class="w3-container w3-center">    
+         <!-- Imagen y logo -->
+	<img src="imagenes/logo.png" class="w3-circle" alt="NukeTrack Logo">
+    </div>
 
 <h1>Esta sección es exclusiva para administradores.</h1>
   
