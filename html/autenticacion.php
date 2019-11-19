@@ -10,7 +10,7 @@ header('Content-Type:text/html;charset=utf-8')
     <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- Aqui acceso al framework de W3School y a nuestro propio CSS -->
+	<!-- Aqui acceso al framework de W3School y a nuestro propio CSS -->
 	<link rel="stylesheet" href="css/w3.css">
 	<link rel="stylesheet" href="css/estilo.css">
   </head>
