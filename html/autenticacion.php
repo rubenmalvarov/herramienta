@@ -32,10 +32,10 @@ header('Content-Type:text/html;charset=utf-8')
 			// Los datos que se envían a el index (login) 
 			$usuario = $_POST['usuario']; 
 			$contrasena = $_POST['contrasena'];
-      $privilegio = $_POST['privilegio'];
+      			$privilegio = $_POST['privilegio'];
 			
 			// Consulta que enviamos a la BBDD
-			$resultado = mysqli_query($variables, "SELECT usuario, contrasena, nombre FROM usuarios WHERE usuario = '$usuario'");
+			$resultado = mysqli_query($variables, "SELECT usuario, contrasena, privilegio FROM usuarios WHERE usuario = '$usuario'");
 			
 			// Variable $fila contiene el resultado de la consulta
 			$fila = mysqli_fetch_assoc($resultado);
