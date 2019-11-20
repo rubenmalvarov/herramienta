@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -23,38 +24,23 @@
     </div>
     
     <br>
-    
-    <div class="w3-container w3-center">
-        <button class="w3-btn w3-deep-orange">
-        <a href="crearincidencia.php">Nueva incidencia</a>
-        </button>
-    </div>
-    
-    <br>
-    
-    <div class="w3-container w3-center">
-        <button class="w3-btn w3-deep-orange">
-        <a href="consultaincidenciaadm.php">Consultar incidencia</a>
-        </button>
-    </div>
-  
-     <br>
-    
-    <div class="w3-container w3-center">
-        <button class="w3-btn w3-deep-orange">
-        <a href="basedeconocimientos.php">Base de conocimientos</a>
-        </button>
-    </div>
-    
-     <br>
-    
-    <div class="w3-container w3-center">
-        <button class="w3-btn w3-deep-orange">
-        <a href="administracionusuarios.php">Administracion de usuarios</a>
-        </button>
-    </div>
 
+    <div class="w3-container w3-center">
+    
+        <a href="crearincidencia.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Nueva incidencia</a>
+   
+    <br><br>
 
+        <a href="consultaincidenciaadm.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Consultar incidencia</a>
+        
+    <br><br>
+    
+        <a href="basedeconocimientos.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Base de conocimientos</a>
+   
+    <br><br>
+    
+        <a href="administracionusuarios.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Administracion de usuarios</a>
+        
     </div>
 
 </html>
