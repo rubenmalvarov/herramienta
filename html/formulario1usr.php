@@ -1,8 +1,9 @@
 
+
 <!doctype html>
 <html lang="es">
   <head>
-    <title>NukeTrack Administrador</title>
+    <title>NukeTrack Usuario</title>
 	 <meta charset="UTF-8">
 
 
@@ -19,26 +20,19 @@
     <br>
     
     <div class="w3-container w3-deep-orange w3-center">
-		<h2>Usuario administrador</h2>
+		<h2>Usuario</h2>
     </div>
     
     <br>
-    
+
     <div class="w3-container w3-center">
-        <button class="w3-btn w3-deep-orange">
-        <a href="crearincidencia.php">Nueva incidencia</a>
-        </button>
+    
+        <a href="crearincidencia.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Nueva incidencia</a>
+   
+    <br><br>
+
+        <a href="consultaincidenciausr.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Consultar incidencia</a>
+        
     </div>
-    
-    <br>
-    
-    <div class="w3-container w3-center">
-        <button class="w3-btn w3-deep-orange">
-        <a href="consultaincidenciausr.php">Consultar incidencia</a>
-        </button>
-    </div>
-  
-     <br>
-    
 
 </html>
