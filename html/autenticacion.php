@@ -29,7 +29,7 @@ header('Content-Type:text/html;charset=utf-8')
 				die("Conexión fallida: " . mysqli_connect_error());
 			}
 			
-			// Los datos que se envían a el index (login) 
+			// Los datos que se envían desde el index (login) 
 			$usuario = $_POST['usuario']; 
 			$contrasena = $_POST['contrasena'];
       			$privilegio = $_POST['privilegio'];
@@ -45,28 +45,36 @@ header('Content-Type:text/html;charset=utf-8')
 			
 			/* 
 			password_Verify() Esta función verifica si la contraseña introducida es la que tiene el metodo hash. 
-			Si todo está bien se crea una sesión de 15 minutos. session.			
+			Si todo está bien se crea una sesión de 15 minutos. session.	
+			
+			Además hacemos dos IF que nos sirven para revisar con que tipo de usuario corresponde
       			*/
 			if (password_verify($_POST['contrasena'], $hash)) {	
-				
+				if ($privilegio = 'adm' ) 
+				{
 				$_SESSION['loggedin'] = true;
 				$_SESSION['nombre'] = $fila['nombre'];
 				$_SESSION['start'] = time();
 				$_SESSION['expire'] = $_SESSION['start'] + (15 * 60) ;
+				header("Location: formulario1adm.php");
+				exit();
+				}
+				if ($privilegio = 'usr' ) 
+				{
+				$_SESSION['loggedin'] = true;
+				$_SESSION['nombre'] = $fila['nombre'];
+				$_SESSION['start'] = time();
+				$_SESSION['expire'] = $_SESSION['start'] + (15 * 60) ;
+				header("Location: formulario1usr.php");
+				exit();
+				}
+				
+				
+				}
         
-        
-         /* Ahora según sea admin o usuario normal se redirige a un sitio u otro, pero eso no se como hacerlo.*/
-          if ($privilegio = 'adm' ) {	
-          <a href='formulario1adm.php'><strong>Please try again!</strong></a></p></div>
-          }
-          
-          if ($privilegio = 'usr' ) {
-          <a href='formulario1usr.php'><strong>Please try again!</strong></a></p></div>
-          }
-       
-		
-			} else {
-        <div class="w3-container w3-deep-orange w3-center"><p><a href='index.html'><strong>Usuario no valido, intentelo de nuevo.</strong></a></p></div>";			
+   
+        <div class="w3-container w3-deep-orange w3-center"><p>
+		<a href='index.html'><strong>Usuario no valido, intentelo de nuevo.</strong></a></p></div>";			
 			}	
 			?>
 		</div>
