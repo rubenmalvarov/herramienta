@@ -44,8 +44,9 @@ header('Content-Type:text/html;charset=utf-8')
 			$hash = $fila['contrasena'];
 			
 			/* 
-			password_Verify() Esta función verifica si la contraseña introducida es la que tiene el metodo hash.Si todo está bien se crea una sesión de 15 minutos. Change 1 on $_SESSION[start] to 5 for a 5 minutes session.			
-      */
+			password_Verify() Esta función verifica si la contraseña introducida es la que tiene el metodo hash. 
+			Si todo está bien se crea una sesión de 15 minutos. session.			
+      			*/
 			if (password_verify($_POST['contrasena'], $hash)) {	
 				
 				$_SESSION['loggedin'] = true;
