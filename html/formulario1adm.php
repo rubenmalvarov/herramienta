@@ -42,5 +42,10 @@
         <a href="administracionusuarios.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Administracion de usuarios</a>
         
     </div>
+	<footer>
+	<div class="w3-container w3-black">
+		<h4>Álvaro Vicente y Rubén Martín TFG</h4>
+	</div>
+	</footer>
 
 </html>
