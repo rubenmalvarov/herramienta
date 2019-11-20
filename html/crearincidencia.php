@@ -16,19 +16,17 @@
 	   <img src="imagenes/logo.png" class="w3-circle" alt="NukeTrack Logo">
     </div>
     
-        <!-- Contenedor principal con catégorias y datos de la incidencia a registrar por el usuario -->
-        
-    <div class="w3-container w3-center">
-    
-        <div class="w3-container w3-deep-orange w3-center">
+    <!-- Contenedor principal con catégorias y datos de la incidencia a registrar por el usuario -->     
+    <div class="w3-container w3-deep-orange w3-center">
 		<h2>Selecciona una categoría </h2>
     </div>
-    <form action="autenticacion.php" method="post">
-        <select name="categoria" size="3">
-            <option value="hardware" selected>Equipamiento y dispositivos</option>
-            <option value="software">Aplicaciones y herramientas</option>   
-            <option value="red">Comunicaciones y conectividad</option>
-        </select>
+	    
+    		<form action="autenticacion.php" method="post">
+        		<select name="categoria" size="3">
+            			<option value="hardware" selected>Equipamiento y dispositivos</option>
+            			<option value="software">Aplicaciones y herramientas</option>   
+            			<option value="red">Comunicaciones y conectividad</option>
+        		</select>
         
 <p>Descripción (¿Cual es el problema?) </p> 
 <br /> <textarea name = descripcion rows = 5 cols = 1></textarea> 
