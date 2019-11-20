@@ -13,10 +13,13 @@
    
     <!-- Imagen y logo -->
     <div class="w3-container w3-center">  
-	    <img src="imagenes/logo.png" class="w3-circle" alt="NukeTrack Logo">
+	   <img src="imagenes/logo.png" class="w3-circle" alt="NukeTrack Logo">
     </div>
     
+        <!-- Contenedor principal con catégorias y datos de la incidencia a registrar por el usuario -->
+        
     <div class="w3-container w3-center">
+    
         <div class="w3-container w3-deep-orange w3-center">
 		<h2>Selecciona una categoría </h2>
     </div>
@@ -44,7 +47,7 @@
 		<h2>Usuario administrador</h2>
     </div>
     
-    <br>
+    <br><br>
 
     <div class="w3-container w3-center">
     
@@ -62,8 +65,9 @@
     
         <a href="administracionusuarios.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Administracion de usuarios</a>
         
+
+        
     </div>
 
 </html>
- 
  
