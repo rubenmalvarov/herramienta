@@ -68,32 +68,11 @@ session_start();
 				<p><a href='login.html'><strong>Please try again!</strong></a></p></div>";		
 				}
 				
-				/* 
-				header("Location: formulario1adm.php"); 
-				exit();
-				}
-				if ($privilegio = 'usr' ) 
-				{
-				$_SESSION['loggedin'] = true;
-				$_SESSION['nombre'] = $fila['nombre'];
-				$_SESSION['start'] = time();
-				$_SESSION['expire'] = $_SESSION['start'] + (15 * 60) ;
-				header("Location: formulario1usr.php");
-				exit();
-				}
+			
 				
+			 	<div class="w3-container w3-deep-orange w3-center"><p>
+				<a href='index.html'><strong>Usuario no valido, intentelo de nuevo.</strong></a></p></div>";			
 				
-				}
-				
-				*/
-				
-				
-				
-        
-   
-    /*    <div class="w3-container w3-deep-orange w3-center"><p>
-		<a href='index.html'><strong>Usuario no valido, intentelo de nuevo.</strong></a></p></div>";			
-			}	
 			?>
 		</div>
 			</body>
