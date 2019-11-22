@@ -30,25 +30,26 @@
         		</select>
                 </div>
                 
-                <div class="w3-container w3-deep-orange w3-center">
+                <div class="w3-container w3-deep-orange">
                         <h2>Resumen</h2>
                 </div>
                 
-                <div class="w3-row w3-section w3-center">
+                <div class="w3-row w3-section">
                     <textarea name = resumen rows = 1 cols = 30> ¿Cual es el problema?</textarea> 
                 </div>
                 
-                <div class="w3-container w3-deep-orange w3-center">
+                <div class="w3-container w3-deep-orange">
                         <h2>Descripción</h2>
                 </div>
                 
              
-                <div class="w3-row w3-section w3-center">
+                <div class="w3-row w3-section">
                     <textarea name = descripcion rows = 5 cols = 30> Describe el problema </textarea> 
                 <div class="w3-row w3-section w3-center">
                     <p><input type = submit value = "Crear" /> <input type = reset value = "Cancelar" /></p> 
                 </div>
                 
+		<a href="formuario1adm.php" class="w3-button w3-deep-orange w3-round-xlarge" style="width:50%">Volver a consola de administrador</a>
             </form> 
        
     </body>    
