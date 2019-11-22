@@ -33,6 +33,8 @@ header('Content-Type:text/html;charset=utf-8')
 			$email = $_POST['email']; 
 			$contrasena = $_POST['contrasena'];
 			
+			alert ($email); 
+			
 			// Consulta que enviamos a la BBDD
 			$resultado = mysqli_query($variables, "SELECT email, contrasena, privilegio FROM usuarios WHERE email = '$email'");
 			
