@@ -23,19 +23,18 @@ header('Content-Type:text/html;charset=utf-8')
 			include 'variables.php';	
 			
 			// Variables de conexión
-			$variables = mysqli_connect($bdhost, $bdidusuario, $bdcontrasena, $bdnombre);
+			$variables = mysqli_connect($bdhost, $bdemail, $bdcontrasena, $bdnombre);
 			// Revisar la conexión
 			if (!$variables) {
 				die("Conexión fallida: " . mysqli_connect_error());
 			}
 			
 			// Los datos que se envían desde el index (login) 
-			$usuario = $_POST['idusuario']; 
+			$email = $_POST['email']; 
 			$contrasena = $_POST['contrasena'];
-      			$privilegio = $_POST['privilegio'];
 			
 			// Consulta que enviamos a la BBDD
-			$resultado = mysqli_query($variables, "SELECT idusuario, contrasena, privilegio FROM usuarios WHERE idusuario = '$usuario'");
+			$resultado = mysqli_query($variables, "SELECT email, contrasena, privilegio FROM usuarios WHERE email = '$email'");
 			
 			// Variable $fila contiene el resultado de la consulta
 			$fila = mysqli_fetch_assoc($resultado);
