@@ -1,19 +1,3 @@
-<?php
-session_start();
-?>
-
-<!doctype html>
-<html lang="en">
-	<head>
-		<title>Check Login and create session</title>
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	</head>
-	<body>
-		<div class="container">
-		
 			<?php
 			// Creamos las variables con los datos necesarios para el acceso a la BBDD.
 			
@@ -47,7 +31,3 @@ session_start();
 			}
 			echo "</table>";
 			?>
-		</div>
-
-	</body>
-</html>
