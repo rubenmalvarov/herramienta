@@ -1,0 +1,7 @@
+<?php
+// Connection variables
+$dbhost	= "localhost";	   // localhost or IP
+$dbuser	= "root";		  // database username
+$dbpass	= "clase1234";		     // database password
+$dbname	= "tfg";    // database name
+?>
