@@ -33,12 +33,13 @@ session_start();
 			$bd = mysqli_select_db( $conexion, $bdnombre ) or die ("Esa BBDD no existe compañero");		
   
       //Metemos los datos recibidos por POST en variables
-      $email = $_POST['email']; 
-	    $contrasena = $_POST['contrasena'];
+      	$email = $_POST['email']; 
+	$contrasena = $_POST['contrasena'];
   
       // Hcemos la consulta de los datos de usuario en la BBDD y los metemos en un array
-      $consulta = "SELECT nombre, email, contrasena, privilegio FROM usuarios";
-$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+	
+     	$consulta = "SELECT nombre, email, contrasena FROM usuarios";
+	$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
     	 $row = mysqli_fetch_assoc($resultado);
 	$contra = $row['contrasena'];
   
