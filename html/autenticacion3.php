@@ -40,10 +40,10 @@ session_start();
 	
      	$consulta = "SELECT nombre, email, contrasena FROM usuarios";
 	$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-    	 $row = mysqli_fetch_assoc($resultado);
+    	$row = mysqli_fetch_assoc($resultado);
 	$contra = $row['contrasena'];
   
-      if (password_verify($_POST['contrasena'],$contra)) {	
+      	if (password_verify($_POST['contrasena'],$contra)) {	
                 
         $_SESSION['loggedin'] = true;
 				$_SESSION['name'] = $row['nombre'];
@@ -60,6 +60,15 @@ session_start();
 				<p><a href='index.html'><strong>Please try again!</strong></a></p></div>";		
 				}
   ?>
+	
+	
+	
+	if (password_verify($_POST['password'], $hash)) {	
+				
+				$_SESSION['loggedin'] = true;
+				$_SESSION['name'] = $row['Name'];
+				$_SESSION['start'] = time();
+				$_SESSION['expire'] = $_SESSION['start'] + (1 * 60) ;	
   
   
 </body>
