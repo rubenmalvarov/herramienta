@@ -1,78 +1,88 @@
-<?php
-session_start();
-?>
-
 <!doctype html>
 <html lang="es">
-	<head>
-	  <title>NukeTrack Acceso</title>
+<head>
+    <title>NukeTrack Acceso</title>
     <meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Aqui acceso al framework de W3School y a nuestro propio CSS -->
 	<link rel="stylesheet" href="css/w3.css">
 	<link rel="stylesheet" href="css/estilo.css">
-  </head>
+</head>
   
-	<body>
+<body>
 		<div class="w3-container w3-center">
-		
-			<?php
-			// Conexión
-			include 'variables.php';	
+        
+        <?php
+			// Creamos las variables con los datos necesarios para el acceso a la BBDD.
 			
-			// Variables de conexión
-			$variables = mysqli_connect($bdhost, $bdemail, $bdcontrasena, $bdnombre);
+			$bdservidor = "localhost";	  	// Nombre del servidor
+			$bdusuario	= "root";		// Usuario de la BBDD
+			$bdcontrasena	= "clase1234";		// Contraseña
+			$bdnombre	= "tfg";    	  	// Nombre de la BBDD
 			
-			// Revisar la conexión
-			if (!$variables) {
-				die("Conexión fallida: " . mysqli_connect_error());
-			}
+			// Creamos la conexión con el servidor de la BBDD
+			$conexion = mysqli_connect($bdservidor, $dbusuario, $bdcontrasena ) or die ("No se pudo conectar a la BBDD");
 			
-			// Los datos que se envían desde el index (login) 
-			$email = $_POST['email']; 
+			// Ahora hay que conectarse a la BBDD.
+			$bd = mysqli_select_db( $conexion, $bdnombre ) or die ("Esa BBDD no existe compañero");	
+			
+            
+            // Probamos a recibir los datos de post.
+            
+            $email = $_POST['email']; 
 			$contrasena = $_POST['contrasena'];
-			
-			alert ($email); 
-			
-			// Consulta que enviamos a la BBDD
-			$resultado = mysqli_query($variables, "SELECT email, contrasena, privilegio, nombre FROM usuarios WHERE email = '$email'");
-			
-			// Variable $fila contiene el resultado de la consulta
-			$fila = mysqli_fetch_assoc($resultado);
-			
-			// Variable $hash contiene la contraseña has de la BBDD
-			$hash = $fila['contrasena'];
-			
-			/* 
-			password_Verify() Esta función verifica si la contraseña introducida es la que tiene el metodo hash. 
-			Si todo está bien se crea una sesión de 15 minutos. session.	
-			
-			Además hacemos dos IF que nos sirven para revisar con que tipo de usuario corresponde
-      			*/
-			if (password_verify($_POST['contrasena'], $hash)) {	
-				/* if ($privilegio = 'adm' ) {*/
-				
-				$_SESSION['loggedin'] = true;
+            
+            echo $email
+            echo $contrasena
+                
+			//Probamos con una consulta sencillita
+			$consulta = "SELECT email, contrasena, privilegio FROM usuarios";
+            
+            //Se alomacena la contraseña en una variable hash
+            $hash = $consulta['contrasena'];
+            
+            /*password_Verify() Esta función verifica si la contraseña introducida es la que tiene el metodo hash. 
+            
+			Si todo está bien se crea una sesión de 15 minutos. session.
+            */
+            
+            if (password_verify($_POST['contrasena'], $hash)) {	
+                
+                $_SESSION['loggedin'] = true;
 				$_SESSION['nombre'] = $fila['nombre'];
 				$_SESSION['start'] = time();
 				$_SESSION['expire'] = $_SESSION['start'] + (15 * 60) ;
-				
-				echo "<div class='alert alert-success mt-4' role='alert'><strong>Bienvenido</strong> $fila[nombre]
-				<p><a href='formulario1adm.php'>Accede a formulario administrador</a></p>;
-				<p><a href='formulario1usr.php'>Accede a formulario usuario</a></p>;
-				
-				
-				} else {
+                
+                echo "<div class='alert alert-success mt-4' role='alert'><strong>Bienvenido</strong> $consulta[email]
+				<p><a href='formulario1adm.php'>Accede a formulario administrador</a></p>";
+                
+        
+                } else {
 				echo "<div class='alert alert-danger mt-4' role='alert'>Email or Password are incorrects!
 				<p><a href='login.html'><strong>Please try again!</strong></a></p></div>";		
 				}
-				
+            
+            
+            
+		/*	$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 			
-				
-			 	<div class="w3-container w3-deep-orange w3-center"><p>
-				<a href='index.html'><strong>Usuario no valido, intentelo de nuevo.</strong></a></p></div>";			
-				
+			// Y la mostramos en PHP
+			echo "<table borde='2'>";
+			echo "<tr>";
+			echo "<th>Nombre</th>";
+			echo "<th>Apellido</th>";
+			echo "<th>Email</th>";
+			echo "</tr>";
+			while ($columna = mysqli_fetch_array( $resultado ))
+			{
+				echo "<tr>";
+				echo "<td>" . $columna['nombre'] . "</td><td>" . $columna['ape1'] . "</td><td>" . $columna['email'] . "</td>";
+				echo "</tr>";
+			}
+			echo "</table>";
+            
+            */
 			?>
 		</div>
 			</body>
