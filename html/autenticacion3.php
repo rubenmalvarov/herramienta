@@ -36,10 +36,11 @@ session_start();
   
       // Hcemos la consulta de los datos de usuario en la BBDD y los metemos en un array
       $consulta = "SELECT nombre, email, contrasena, privilegio FROM usuarios";
-	    $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-      $row = mysqli_fetch_assoc($resultado);
+$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+    	 $row = mysqli_fetch_assoc($resultado);
+	$contra = $row['contrasena'];
   
-      if (password_verify($_POST['contrasena']) {	
+      if (password_verify($_POST['contrasena'],$contra)) {	
                 
         $_SESSION['loggedin'] = true;
 				$_SESSION['name'] = $row['nombre'];
@@ -47,7 +48,8 @@ session_start();
 				$_SESSION['expire'] = $_SESSION['start'] + (15 * 60) ;
                 
                 echo "<div class='alert alert-success mt-4' role='alert'><strong>Bienvenido</strong>$row[nombre]
-				<p><a href='formulario1adm.php'>Accede a formulario administrador</a></p>";
+				<p>
+				<a href='formulario1adm.php'>Accede a formulario administrador</a></p>";
                 
         
       } else {
