@@ -25,7 +25,7 @@ session_start();
 			$bdnombre	= "tfg";    	  	// Nombre de la BBDD
 			
 			// Creamos la conexión con el servidor de la BBDD
-			$conexion = mysqli_connect($bdservidor, $dbusuario, $bdcontrasena ) or die ("No se pudo conectar a la BBDD");
+			$conexion = mysqli_connect($bdservidor, $bdusuario, $bdcontrasena ) or die ("No se pudo conectar a la BBDD");
 			
 			// Ahora hay que conectarse a la BBDD.
 			$bd = mysqli_select_db( $conexion, $bdnombre ) or die ("Esa BBDD no existe compañero");	
