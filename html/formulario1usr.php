@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="es">
   <head>
@@ -20,7 +19,7 @@
 		<h2>Usuario</h2>
     </div>
         
-    <br><br>
+    <br>
         
         <a href="crearincidencia.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Nueva incidencia</a>
    
@@ -32,5 +31,17 @@
         
     </div>
     
-     <a href="index.html" class="w3-button w3-deep-orange w3-round-xlarge" style="width:25%">Cerrar sesión</a>
+      
+    <!-- Pie de página y enlace a Login. -->
+    
+    <br>
+    <a href="index.html" class="w3-button w3-deep-orange w3-round-xlarge" style="width:25%">Cerrar sesión</a>
+
+    <br>
+    <br>
+	<footer>
+	<div class="w3-container w3-black" style="width:100%">
+		<h4>Álvaro Vicente y Rubén Martín TFG</h4>
+	</div>
+	</footer>
 </html>
