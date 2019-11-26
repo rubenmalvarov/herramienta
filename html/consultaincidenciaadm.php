@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>NukeTrack Nueva Incidencia</title>
+    <title>NukeTrack consulta INC Admin/title>
 	 <meta charset="UTF-8">
     <!-- Aqui acceso al framework de W3School y a nuestro propio CSS -->
 	<link rel="stylesheet" href="css/w3.css">
