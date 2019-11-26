@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="es">
   <head>
@@ -16,34 +15,56 @@
     
     <br>
     
-    <div class="w3-container w3-deep-orange w3-center">
-		<h2>Administración de usuarios</h2>
-    </div>
+    <div class="w3-container w3-card-4 w3-light-grey w3-margin w3-center">
+        
+        <div class="w3-container w3-deep-orange w3-center">
+		  <h2>Administración de usuarios</h2>
+        </div>
     
-    <br>
+        <br>
     
-    <div class="w3-container w3-center">
-        <button class="w3-btn w3-deep-orange">
-        <a href="consultausuario.php">Consulta de usuarios<</a>
-        </button>
-    </div>
+        <div class="w3-container w3-center">
     
-    <br>
+                <a href="consultausuario.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Consulta de usuarios</a>
+       
+        </div>
     
-    <div class="w3-container w3-center">
-        <button class="w3-btn w3-deep-orange">
-        <a href="creausuario.php">Creación de usuarios</a>
-        </button>
-    </div>
+        <br>
+    
+        <div class="w3-container w3-center">
+          
+            <a href="creausuario.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Creación de usuarios</a>
+       
+        </div>
      
-      <br>
+        <br>
     
-    <div class="w3-container w3-center">
-        <button class="w3-btn w3-deep-orange">
-        <a href="eliminausuario.php">Eliminación usuarios</a>
-        </button>
+        <div class="w3-container w3-center">
+       
+            <a href="eliminausuario.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Eliminación usuarios</a>
+       
+        </div>
+        
+        <br>
+        
+        
+         <br>
+        <br>
     </div>
-  
+  <a href="formuario1adm.php" class="w3-button w3-deep-orange w3-round-xlarge" style="width:50%">Volver a consola de administrador</a>
      <br>
     
+  
+    <!-- Pie de página y enlace a Login. -->
+    
+    <br>
+    <a href="index.html" class="w3-button w3-deep-orange w3-round-xlarge" style="width:25%">Cerrar sesión</a>
+
+    <br>
+    <br>
+	<footer>
+	<div class="w3-container w3-black" style="width:100%">
+		<h4>Álvaro Vicente y Rubén Martín TFG</h4>
+	</div>
+	</footer>
 </html>
