@@ -32,7 +32,7 @@
             $email = $_POST['email'];
             $contrasena = $_POST['contrasena'];
                 
-			$consulta = "SELECT contrasena FROM usuarios where email='$email'";
+			$consulta = "SELECT contrasena, privilegio FROM usuarios where email='$email'";
             
 		
 		  // Muestra contraseña	
@@ -40,15 +40,26 @@
 	       $contra1=mysqli_fetch_row['contrasena'];
             
             $contra=$contra1[0];
-            echo $contrasena;
-            echo $contra;
+            // echo $contrasena;
+            // echo $contra;
+            $privilegio=$contra1[1];
             
             if ( $contrasena == $contra )
                 {
-                echo "<p> Bien </p>";
-                } else {
-                echo "<p> Mal </p>";
-            }
+                // echo "<p> Bien </p>";
+                if ( $privilegio == "adm" )
+                { 
+                  echo "<p> Eres admin </p>"; 
+                } else { 
+                    echo "<p> Eres Usuario normal </p>"; 
+                }
+                
+                } 
+            else {
+                echo "<p>Mal puesto</p>";
+                
+                if
+                }
         ?>
 			
 		</div>
