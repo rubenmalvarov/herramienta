@@ -38,8 +38,9 @@
 		  // Muestra contraseña	
 
 	       $contra1=mysqli_fetch_row['contrasena'];
-            echo $contra1[0];
-   
+            $contra=$contra1[0];
+            echo $contrasena;
+            echo $contra;
   ?>
 			
 		</div>
