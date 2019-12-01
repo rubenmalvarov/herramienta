@@ -34,10 +34,11 @@
                 
 			$consulta = "SELECT contrasena, privilegio FROM usuarios where email='$email'";
             
+            $resultado = mysqli_query($conexion, $consulta) or die ("Algo ha ido mal enla consulta a la base de datos");	
 		
 		  // Muestra contraseña	
 
-	       $contra1=mysqli_fetch_row['contrasena'];
+	       $contra1=mysqli_fetch_row['$resultado'];
             
             $contra=$contra1[0];
             // echo $contrasena;
@@ -66,3 +67,4 @@
 			
 		</div>
 </body>
+</html>
