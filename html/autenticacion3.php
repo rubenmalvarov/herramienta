@@ -26,35 +26,20 @@
 			
 			// Ahora hay que conectarse a la BBDD.
 			$bd = mysqli_select_db( $conexion, $bdnombre ) or die ("Esa BBDD no existe compañero");	
-			
+				
 			//Probamos con una consulta sencillita
             
             $email = $_POST['email'];
-            $contrasena = $_POST['contrasena']
+            $contrasena = $_POST['contrasena'];
                 
-			$consulta = "SELECT nombre, contrasena, email FROM usuarios where email = '$email'";
+			$consulta = "SELECT contrasena FROM usuarios where email='$email'";
             
-			$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-			
+		
+		  // Muestra contraseña	
 
-    	   $row = mysqli_fetch_assoc($resultado);
-	       $contra = $row['contrasena'];
-            
-       if ( ($_POST['contrasena']) == $contra ) {	
-                
-			
-           
-        echo "<div class='alert alert-danger mt-4' role='alert'>Hola o lo que sea
-				<p><a href='index.html'><strong>Please try again!</strong></a></p></div>";
-            
-            
-              
-			
-        
-      } else {
-				echo "<div class='alert alert-danger mt-4' role='alert'>Email or Password are incorrects!
-				<p><a href='index.html'><strong>Please try again!</strong></a></p></div>";		
-				}
+	       $contra1=mysqli_fetch_row['contrasena'];
+            echo $contra1[0];
+   
   ?>
 			
 		</div>
