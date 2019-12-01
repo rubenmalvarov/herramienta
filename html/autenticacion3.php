@@ -45,7 +45,7 @@
             $privilegio=$contra1[1];
             
             if ( $contrasena == $contra )
-                {
+            {
                 // echo "<p> Bien </p>";
                 if ( $privilegio == "adm" )
                 { 
@@ -56,7 +56,7 @@
                 { 
                     echo "<p> Eres Usuario normal </p>"; 
                 }
-                }
+            }
             
             else 
             {
@@ -66,4 +66,3 @@
 			
 		</div>
 </body>
-</html>
