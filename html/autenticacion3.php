@@ -38,11 +38,20 @@
 		  // Muestra contraseña	
 
 	       $contra1=mysqli_fetch_row['contrasena'];
+            
             $contra=$contra1[0];
             echo $contrasena;
             echo $contra;
-  ?>
+            
+            if ( $contrasena == $contra )
+                {
+                echo "<p> Bien </p>";
+                } else {
+                echo "<p> Mal </p>";
+            }
+        ?>
 			
 		</div>
 </body>
 </html>
+
