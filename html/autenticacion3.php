@@ -50,19 +50,20 @@
                 if ( $privilegio == "adm" )
                 { 
                   echo "<p> Eres admin </p>"; 
-                } else { 
+                } 
+                
+                else 
+                { 
                     echo "<p> Eres Usuario normal </p>"; 
                 }
-                
-                } 
-            else {
-                echo "<p>Mal puesto</p>";
-                
-                if
                 }
+            
+            else 
+            {
+                echo "<p>Mal puesto</p>";
+            }
         ?>
 			
 		</div>
 </body>
 </html>
-
