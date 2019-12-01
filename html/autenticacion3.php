@@ -49,16 +49,25 @@
 			echo $contrasena;
 			echo $contra;
 			echo $privilegio;
-    			if ( $contrasena == $contra )
-				{
-					echo "<p> Bien </p>";            
+			if ( $contrasena == $contra )
+            		{
+               			 // echo "<p> Bien </p>";
+               			 if ( $privilegio == "adm" )
+                	{ 
+                  	echo "<p> Eres admin </p>"; 
+                	} 
+                
+                	else 
+                	{ 
+                    	echo "<p> Eres Usuario normal </p>"; 
+                	}
+            		}
             
-              
-				} else {
-					echo "<p> Mal </p>";            
-			}
-
-			 ?>
+            		else 
+            		{
+                		echo "<p>Mal puesto</p>";
+            		} 
+			?>
 			
 		</div>
 </body>
