@@ -1,4 +1,5 @@
 <!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
     <title>NukeTrack Acceso</title>
@@ -26,44 +27,38 @@
 			
 			// Ahora hay que conectarse a la BBDD.
 			$bd = mysqli_select_db( $conexion, $bdnombre ) or die ("Esa BBDD no existe compañero");	
-				
+			
+			// --------------------------------------------
+
+
 			//Probamos con una consulta sencillita
             
-            $email = $_POST['email'];
-            $contrasena = $_POST['contrasena'];
+            		$email = $_POST['email'];
+            		$contrasena = $_POST['contrasena'];
                 
-			$consulta = "SELECT contrasena, privilegio FROM usuarios where email='$email'";
+			$consulta = "SELECT contrasena, privilegio FROM usuarios where email = '$email'";
             
-            $resultado = mysqli_query($conexion, $consulta) or die ("Algo ha ido mal enla consulta a la base de datos");	
-		
-		  // Muestra contraseña	
+			$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+			
 
-	       $contra1=mysqli_fetch_row['$resultado'];
+            		// MUETRA CONTRASENA
+
+			$contra1=mysqli_fetch_row($resultado);
+			$contra= $contra1[0];
+			$privilegio= $contra1[1];
+			echo $contrasena;
+			echo $contra;
+			echo $privilegio;
+    			if ( $contrasena == $contra )
+				{
+					echo "<p> Bien </p>";            
             
-            $contra=$contra1[0];
-            // echo $contrasena;
-            // echo $contra;
-            $privilegio=$contra1[1];
-            
-            if ( $contrasena == $contra )
-            {
-                // echo "<p> Bien </p>";
-                if ( $privilegio == "adm" )
-                { 
-                  echo "<p> Eres admin </p>"; 
-                } 
-                
-                else 
-                { 
-                    echo "<p> Eres Usuario normal </p>"; 
-                }
-            }
-            
-            else 
-            {
-                echo "<p>Mal puesto</p>";
-            }
-        ?>
+              
+				} else {
+					echo "<p> Mal </p>";            
+			}
+
+			 ?>
 			
 		</div>
 </body>
