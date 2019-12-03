@@ -51,7 +51,7 @@
                         <input type = reset value = "Cancelar" class="w3-btn w3-deep-orange w3-round-xlarge"/></p> 
                 </div>
                 
-		      <a href="formuario1adm.php" class="w3-button w3-deep-orange w3-round-xlarge" style="width:50%">Volver a consola de administrador</a>
+		    <!-- <a href="formuario1adm.php" class="w3-button w3-deep-orange w3-round-xlarge" style="width:50%">Volver a consola de administrador</a> -->
              <br>
                   <br>
         </form>
