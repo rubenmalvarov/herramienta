@@ -32,18 +32,18 @@
 			
 			
 			//Recabamos datos recibidos del formulario vía POST
-            		$id = $_POST['id'];
+            $id = $_POST['id'];
             
-			$consulta = "SELECT , privilegio FROM usuarios where email = '$email'"; */
+			$consulta = "SELECT categoria, resumen, descripcion FROM incidencias where id = '$id'";
 			
 			
             		// Realizamos la inserción en la BBDD
-            		$insertar= "INSERT INTO incidencias ( categoria, resumen, descripcion ) VALUES ('$categoria','$resumen,'$descripcion')";
+            		// $insertar= "INSERT INTO incidencias ( categoria, resumen, descripcion ) VALUES ('$categoria','$resumen,'$descripcion')";
             
 			/* $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos"); */
         
 			
-       // MUETRA CONTRASENA
+            		// MUETRA CONTRASENA
 			//$contra1=mysqli_fetch_row($resultado);
 			//$contra= $contra1[0];
 			//$privilegio= $contra1[1];
@@ -52,19 +52,33 @@
 			//echo $privilegio;
             		
 			//Si la inserción a funcionado muestra mensaje
-			if (mysqli_query($conexion, $insertar)) 
+            $resultado = mysqli_query( $conexion, $consulta );
+            
+			if (mysqli_query($conexion, $consulta)) 
 			{
-            			echo "<div class='w3-container w3-deep-orange w3-center'>
-		             	<h2>Su incidencia se a guardado correctamente</h2>
-                         	</div>"; 
+            		while ($resultadoarray = mysqli_fetch_array( $resultado ))
+			         {
+				        echo "<div class='w3-container w3-deep-orange w3-center'>
+		             	<h2>Resumen incidencia</h2> </div>";
+                            
+				        echo "<div class='w3-container w3-deep-orange w3-center'>" . $resultadoarray['resumen'] . "</div>";
+                        
+                        
+				        echo "<div class='w3-container w3-deep-orange w3-center'>
+		             	<h2>Descripción de la incidencia</h2> </div>";
+                            
+				        echo "<div class='w3-container w3-deep-orange w3-center'>" . $resultadoarray['descripcion'] . "</div>";
+			         }
+             
                 	
             		else 
                 	{ 
                			echo "<div class='w3-container w3-deep-orange w3-center'>
-		              	<h2>Error al ejecutar la inserción</h2>
+		              	<h2>Algo salió mal en la consulta a la BBDD</h2>
                          	</div>";
 			}
 			}
+	
 			?>
 			
 		</div>
