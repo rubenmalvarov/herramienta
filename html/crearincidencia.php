@@ -16,7 +16,8 @@
     
     <!-- Contenedor principal con catégorias y datos de la incidencia a registrar por el usuario -->     
     <div class="w3-container w3-card-4 w3-light-grey w3-margin">
-    		<form action="autenticacion.php" method="post">
+	    
+    		<form action="nuevainc.php" method="post">
                 <div class="w3-container w3-deep-orange w3-center">
 		              <h2>Selecciona una categoría </h2>
                 </div>
@@ -24,9 +25,9 @@
                 <div class="w3-row w3-section">
         		<select class="w3-select w3-border" name="categoria">
                         <option value="" disabled selected>Selecciona una categoría</option>
-            			<option value="hardware">Equipamiento y dispositivos</option>
-            			<option value="software">Aplicaciones y herramientas</option>   
-            			<option value="red">Comunicaciones y conectividad</option>
+            			<option value="1">Equipamiento y dispositivos</option>
+            			<option value="2">Aplicaciones y herramientas</option>   
+            			<option value="3">Comunicaciones y conectividad</option>
         		</select>
                 </div>
                 
