@@ -28,43 +28,45 @@
 			$bd = mysqli_select_db( $conexion, $bdnombre ) or die ("Esa BBDD no existe compañero");	
 			
 			// --------------------------------------------
-			//Probamos con una consulta sencillita
+			
+			
+			
+			//Recabamos datos recibidos del formulario vía POST
+            		$categoria = $_POST['categoria'];
+            		$resumen = $_POST['resumen'];
+                    	$descripcion = $_POST['descripcion'];
             
-            		$email = $_POST['email'];
-            		$contrasena = $_POST['contrasena'];
-                
-			$consulta = "SELECT contrasena, privilegio FROM usuarios where email = '$email'";
+			/* $consulta = "SELECT contrasena, privilegio FROM usuarios where email = '$email'"; */
+			
+			
+            		// Realizamos la inserción en la BBDD
+            		$insertar= "INSERT INTO incidencias ( categoria, resumen, descripcion ) VALUES ('$categoria','$resumen,'$descripcion')";
             
-			$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+			/* $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos"); */
+        
 			
             		// MUETRA CONTRASENA
-			$contra1=mysqli_fetch_row($resultado);
-			$contra= $contra1[0];
-			$privilegio= $contra1[1];
+			//$contra1=mysqli_fetch_row($resultado);
+			//$contra= $contra1[0];
+			//$privilegio= $contra1[1];
 			//echo $contrasena;
 			//echo $contra;
 			//echo $privilegio;
-			if ( $contrasena == $contra )
-            		{
-               			 // echo "<p> Bien </p>";
-               			 if ( $privilegio == "adm" )
-                	{ 
-                  	echo "<div class="w3-container w3-center">
-			<a href="formulario1adm.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Has iniciado sesión con perfil de administrador, pulsa para continuar</a></div>"; 
-                	} 
-                
-                	else 
-                	{ 
-                    	echo "<div class="w3-container w3-center">
-			<a href="formulario1usr.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Has iniciado sesión con perfil de administrador, pulsa para continuar</a></div>";
-			}
-            		}
-            
+            		
+			//Si la inserción a funcionado muestra mensaje
+			if (mysqli_query($conexion, $insertar)) 
+			{
+            			echo "<div class='w3-container w3-deep-orange w3-center'>
+		             	<h2>Su incidencia se a guardado correctamente</h2>
+                         	</div>"; 
+                	
             		else 
-            		{
-                	echo "<div class="w3-container w3-center">
-			<a href="index.html" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Has iniciado sesión con perfil de administrador, pulsa para continuar</a></div>"; 
-			} 
+                	{ 
+               			echo "<div class='w3-container w3-deep-orange w3-center'>
+		              	<h2>Error al ejecutar la inserción</h2>
+                         	</div>";
+			}
+			}
 			?>
 			
 		</div>
