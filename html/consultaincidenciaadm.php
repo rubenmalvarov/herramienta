@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>NukeTrack consulta INC Admin/title>
+    <title>NukeTrack Consulta INC usuario</title>
 	 <meta charset="UTF-8">
     <!-- Aqui acceso al framework de W3School y a nuestro propio CSS -->
 	<link rel="stylesheet" href="css/w3.css">
@@ -20,9 +20,9 @@
 		              <h2>Introduzca el número de incidencia</h2>
                 </div>
         
-        <form action="consultarincidenciaadm.php" method="post">
+        <form action="consultaadm.php" method="post">
                 <div class="w3-row w3-section ">
-                    <textarea name = resumen rows = 1 cols = 10> INCxxxxx </textarea> 
+                    <textarea name = "id" rows = 1 cols = 10> INCxxxxx </textarea> 
                 
                     <p><input type = submit value = "Consultar incidencia"class="w3-btn w3-deep-orange w3-round-xlarge" style="width:25%"/> 
                 </div>
@@ -45,7 +45,5 @@
 	   </footer>
 
        
-    </body>    
-        
-        
-    </html>
+    </body>   
+</html>
