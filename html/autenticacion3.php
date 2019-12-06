@@ -89,7 +89,7 @@
                 	else 
                 	{ 
                     	echo "<div class="w3-container w3-center">
-			<a href="formulario1usr.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Has iniciado sesión con perfil de administrador, pulsa para continuar</a></div>";
+			<a href="formulario1usr.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Has iniciado sesión con perfil de usuario, pulsa para continuar</a></div>";
 			}
             		}
             
