@@ -42,12 +42,41 @@
 
             		// MUETRA CONTRASENA
 
-			$contra1=mysqli_fetch_row($resultado);
-			$contra= $contra1[0];
-			$privilegio= $contra1[1];
-			//echo $contrasena;
-			//echo $contra;
-			//echo $privilegio;
+			//$contra1=mysqli_fetch_row($resultado);
+			//$contra= $contra1[0];
+			//$privilegio= $contra1[1];
+			echo "<p>Contra POST </p>".$contrasena;
+			echo "<p>Contra select </p>".$contra;
+			echo $privilegio;
+			if ( $contrasena == $contra )
+            		{
+               			 // echo "<p> Bien </p>";
+               			 if ( $privilegio == "adm" )
+                	{ 
+                  	echo "<div class='w3-container w3-center'>";
+			echo "<a href='formulario1adm.php' class='w3-button w3-deep-orange w3-center w3-round-xlarge' style='width:50%'>Has iniciado sesión con perfil de administrador, pulsa para continuar</a>";
+			echo "</div>"; 
+                	} 
+                
+                	else 
+                	{ 
+                    	echo "<div class='w3-container w3-center'>";
+			echo "<a href='formulario1usr.php' class='w3-button w3-deep-orange w3-center w3-round-xlarge' style='width:50%'>Has iniciado sesión con perfil de administrador, pulsa para continuar</a>";
+			echo "</div>";
+			}
+            		}
+            
+            		else 
+            		{
+                	echo "<div class='w3-container w3-center'>";
+			echo "<a href='index.html' class='w3-button w3-deep-orange w3-center w3-round-xlarge' style='width:50%'>Usuario no existe, pulsa para volver al login</a>";
+			echo "</div>"; 
+			} 
+			?>
+			
+		</div>
+</body>
+</html>
 			if ( $contrasena == $contra )
             		{
                			 // echo "<p> Bien </p>";
