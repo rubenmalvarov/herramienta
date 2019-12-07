@@ -63,8 +63,13 @@
 				echo "</div>"; 
             
 				echo "<div class='w3-container w3-center'>" .$estado. "</div>";
-      			?>
-			
-		</div>
+
+		echo "<form action='resolver.php' method='post'>";
+		echo "<input name='id' type='hidden' value='$id'>";
+		echo "<input type = submit value = 'Resolver la incidencia' class='w3-button w3-deep-orange w3-round-xlarge' style='width:25%'>";
+		echo "</form>";
+		echo "</div>";
+		?>
+
 </body>
 </html>
