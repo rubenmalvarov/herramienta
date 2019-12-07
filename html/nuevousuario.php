@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="es">
 <head>
@@ -36,36 +34,30 @@
 			//Recabamos datos recibidos del formulario vía POST
             		$email = $_POST['email'];
             		$contrasena = $_POST['contrasena'];
-                $nombre = $_POST['nombre'];
+	                $nombre = $_POST['nombre'];
             		$apellido1 = $_POST['apellido1'];
-                $apellido2 = $_POST['apellido2'];
-                $privilegios = $_POST['permisos'];
-      
+        	        $apellido2 = $_POST['apellido2'];
+                	$privilegios = $_POST['permisos'];
+      			$contrahash = password_hash($contrasena, PASSWORD_BCRYPT);
+		//	echo $contrahash;
 		//	$consulta1 = "SELECT idusuario FROM usuarios where email = '$email2'";
-			echo $email;
-			echo $contrasena;
-			echo $nombre;
-			echo $apellido1;
-      echo $apellido2;
-      echo $privilegios;
-      
-			/* $resultado1 = mysqli_query( $conexion, $consulta1 ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-        
-			$idusu=mysqli_fetch_row($resultado1);
-			$idusu1 = $idusu[0];
-			echo $idusu1;
+		//	echo $email;
+		//	echo $contrasena;
+		//	echo $nombre;
+		//	echo $apellido1;
+      		//	echo $apellido2;
+      		//	echo $privilegios;
             		// Realizamos la inserción en la BBDD
-            		$insertar= "INSERT INTO incidencias (idusuario, categoria, resumen, descripcion, fcreacion) VALUES ('$idusu1', '$categoria', '$resumen', '$descripcion', NOW())";
-			$resultado2 = mysqli_query( $conexion, $insertar ) or die ( "Algo ha ido mal en la creacion de la incidenci");
+
+            		$insertar= "INSERT INTO usuarios (contrasena, nombre, ape1, ape2, email, privilegio) VALUES ('$contrahash', '$nombre', '$apellido1', '$apellido2', '$email', '$privilegios')";
+			$resultado1 = mysqli_query( $conexion, $insertar ) or die ("Algo ha ido mal en la creacion del usuario");
               		//$privilegio= $contra1[1];
 			//echo $contrasena;
 			//echo $contra;
 			//echo $privilegio;
-            		
-			//Si la inserción a funcionado muestra mensaje
-      */
 			?>
 			
 		</div>
 </body>
 </html>
+
