@@ -1,3 +1,16 @@
+  
+<!doctype html>
+<html lang="es">
+	  <head>
+    <title>NukeTrack Acceso</title>
+	 <meta charset="UTF-8">
+
+
+    <!-- Aqui acceso al framework de W3School y a nuestro propio CSS -->
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="css/estilo.css">
+  </head>
+	<body>
 <?php
 			// Creamos las variables con los datos necesarios para el acceso a la BBDD.
 			
@@ -31,3 +44,5 @@
             	echo "</div>";
            	echo "</form>";
 			?>
+	</body>
+</html>
