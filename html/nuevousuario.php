@@ -51,7 +51,11 @@
 
             		$insertar= "INSERT INTO usuarios (contrasena, nombre, ape1, ape2, email, privilegio) VALUES ('$contrahash', '$nombre', '$apellido1', '$apellido2', '$email', '$privilegios')";
 			$resultado1 = mysqli_query( $conexion, $insertar ) or die ("Algo ha ido mal en la creacion del usuario");
-              		//$privilegio= $contra1[1];
+              		
+			echo "<div class='w3-container w3-center'>";
+			echo "<a href='formulario1adm.php' class='w3-button w3-round-xlarge w3-deep-orange w3-center style='width:50%'>Volver al menú anterior</a>";
+			echo "</div>";
+			//$privilegio= $contra1[1];
 			//echo $contrasena;
 			//echo $contra;
 			//echo $privilegio;
@@ -60,4 +64,3 @@
 		</div>
 </body>
 </html>
-
