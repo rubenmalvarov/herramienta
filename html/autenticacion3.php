@@ -46,7 +46,8 @@
 			//echo "<p>Contra POST </p>".$contrasena;
 			//echo "<p>Contra select </p>".$contra;
 			//echo $privilegio;
-			if ( $contrasena == $contra )
+			//if ( $contrasena == $contra )
+			if (password_verify($contrasena,$contra))
             		{
                			 // echo "<p> Bien </p>";
                			 if ( $privilegio == "adm" )
