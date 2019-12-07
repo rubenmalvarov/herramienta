@@ -22,7 +22,7 @@
         
         <form action="consultausr.php" method="post">
                 <div class="w3-row w3-section ">
-                    <textarea name = "id" rows = 1 cols = 10> INCxxxxx </textarea> 
+                    <textarea name = "id" rows = 1 cols = 10> 0 </textarea> 
                 
                     <p><input type = submit value = "Consultar incidencia"class="w3-btn w3-deep-orange w3-round-xlarge" style="width:25%"/> 
                 </div>
