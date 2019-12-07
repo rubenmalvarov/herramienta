@@ -51,7 +51,10 @@
 			echo $idusu1;
             		// Realizamos la inserción en la BBDD
             		$insertar= "INSERT INTO incidencias (idusuario, categoria, resumen, descripcion, fcreacion) VALUES ('$idusu1', '$categoria', '$resumen', '$descripcion', NOW())";
-			$resultado2 = mysqli_query( $conexion, $insertar ) or die ( "Algo ha ido mal en la creacion de la incidenci");
+			$resultado2 = mysqli_query( $conexion, $insertar ) or die ( "Algo ha ido mal en la creacion de la incidencia");
+			echo "<div class='w3-container w3-center'>";
+			echo "<a href='formulario1adm.php' class='w3-button w3-round-xlarge w3-deep-orange w3-center style='width:50%'>Volver al menú anterior</a>";
+			echo "</div>";
               		//$privilegio= $contra1[1];
 			//echo $contrasena;
 			//echo $contra;
