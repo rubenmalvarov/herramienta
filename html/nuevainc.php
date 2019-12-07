@@ -30,7 +30,7 @@
 			// --------------------------------------------
 			
 			
-			
+		
 			//Recabamos datos recibidos del formulario vía POST
             		$categoria = $_POST['categoria'];
             		$resumen = $_POST['resumen'];
