@@ -24,14 +24,6 @@
         <br>
     
         <div class="w3-container w3-center">
-    
-                <a href="consultausuario.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Consulta de usuarios</a>
-       
-        </div>
-    
-        <br>
-    
-        <div class="w3-container w3-center">
           
             <a href="creausuario.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Creación de usuarios</a>
        
