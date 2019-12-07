@@ -18,7 +18,30 @@
     <div class="w3-container w3-card-4 w3-light-grey w3-margin">
 	    
     		<form action="nuevousuario.php" method="post">
-                
+                <div class="w3-container w3-deep-orange">
+                       <h2>Introduce nombre</h2>
+                </div>
+			
+		<div class="w3-row w3-section">
+                    <textarea name = "nombre" rows = 1 cols = 15> Describe el problema </textarea>
+                </div>
+		
+		<div class="w3-container w3-deep-orange">
+                       <h2>Introduce primer apellido</h2>
+                </div>
+			
+		<div class="w3-row w3-section">
+                    <textarea name = "apellido1" rows = 1 cols = 15> Describe el problema </textarea>
+                </div>
+			
+		<div class="w3-container w3-deep-orange">
+                       <h2>Introduce Segundo apellido</h2>
+                </div>
+			
+		<div class="w3-row w3-section">
+                    <textarea name = "apellido2" rows = 1 cols = 15> Describe el problema </textarea>
+                </div>
+			
                 <div class="w3-container w3-deep-orange">
                         <h2>Introduce email</h2>
                 </div>
@@ -30,23 +53,21 @@
                 <div class="w3-container w3-deep-orange">
                         <h2>Introduce contraseña</h2>
                 </div>
-                
              
                 <div class="w3-row w3-section">
                     <textarea name = "contrasena" rows = 1 cols = 15> Describe el problema </textarea>
                 </div>
 		
-		<div class="w3-row w3-section">
-                    <textarea name = "nombre" rows = 1 cols = 15> Describe el problema </textarea>
-                </div>
 			
 		<div class="w3-row w3-section">
-                    <textarea name = "apellido1" rows = 1 cols = 15> Describe el problema </textarea>
+        		<select class="w3-select w3-border" name="permisos">
+                        <option value="" disabled selected>Selecciona un tipo de usuario</option>
+            			<option value="usr">Usuario</option>
+            			<option value="adm">Administrador</option>   
+            			
+        		</select>
                 </div>
-			
-		<div class="w3-row w3-section">
-                    <textarea name = "apellido2" rows = 1 cols = 15> Describe el problema </textarea>
-                </div>
+		
 			
                 <div class="w3-row w3-section">
                     <p><input type = submit value = "Crear"class="w3-btn w3-deep-orange w3-round-xlarge" /> 
