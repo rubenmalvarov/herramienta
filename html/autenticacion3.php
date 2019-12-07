@@ -49,14 +49,9 @@
                			 // echo "<p> Bien </p>";
                			 if ( $privilegio == "adm" )
                 	{ 
-                  echo "<div class='w3-container w3-center'>";
-			      echo "<form class='w3-container' action='formulario1adm.php' method='post'>";
-		          echo "<input class='w3-input w3-border' type='hidden' name='email' value='<?php htmlspecialchars($name); ?>'>";
-		      
-			     echo "<input type='submit' value='Aceptar' class='w3-btn w3-deep-orange w3-round-xlarge'>";
-
-	               echo "</form>";
-			     echo "</div>"; 
+                  	echo "<div class='w3-container w3-center'>";
+			echo "<a href='formulario1adm.php' class='w3-button w3-deep-orange w3-center w3-round-xlarge' style='width:50%'>Has iniciado sesión con perfil de administrador, pulsa para continuar</a>";
+			echo "</div>"; 
                 	} 
                 
                 	else 
