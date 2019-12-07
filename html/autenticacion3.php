@@ -36,7 +36,9 @@
 			$consulta = "SELECT contrasena, privilegio FROM usuarios where email = '$email'";
             
 			$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-			
+			$fh = fopen("temp.txt", 'w');
+			fwrite($fh, $email);
+			fclose($fh);
             		// MUETRA CONTRASENA
 			$contra1=mysqli_fetch_row($resultado);
 			$contra= $contra1[0];
