@@ -38,21 +38,21 @@
             		$fh = fopen("temp.txt", 'r');
 			$email2 = fgets($fh);
 			fclose($fh);
-			/* $consulta = "SELECT contrasena, privilegio FROM usuarios where email = '$email'"; */
+			$consulta1 = "SELECT idusuario FROM usuarios where email = '$email2'";
 			echo $categoria;
 			echo $resumen;
 			echo $descripcion;
 			echo $email2;
-            		// Realizamos la inserción en la BBDD
-            		//$insertar= "INSERT INTO incidencias ( categoria, resumen, descripcion ) VALUES ('$categoria','$resumen,'$descripcion')";
             
-			/* $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos"); */
+			$resultado1 = mysqli_query( $conexion, $consulta1 ) or die ( "Algo ha ido mal en la consulta a la base de datos");
         
-			
-            		// MUETRA CONTRASENA
-			//$contra1=mysqli_fetch_row($resultado);
-			//$contra= $contra1[0];
-			//$privilegio= $contra1[1];
+			$idusu=mysqli_fetch_row($resultado1);
+			$idusu1 = $idusu[0];
+			echo $idusu1;
+            		// Realizamos la inserción en la BBDD
+            		$insertar= "INSERT INTO incidencias (idusuario, categoria, resumen, descripcion, fcreacion) VALUES ('$idusu1', '$categoria', '$resumen', '$descripcion', NOW())";
+			$resultado2 = mysqli_query( $conexion, $insertar ) or die ( "Algo ha ido mal en la creacion de la incidenci");
+              		//$privilegio= $contra1[1];
 			//echo $contrasena;
 			//echo $contra;
 			//echo $privilegio;
