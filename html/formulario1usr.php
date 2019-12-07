@@ -15,8 +15,7 @@
 
     <div class="w3-container w3-card-4 w3-light-grey w3-margin w3-center">
            
-	    $email = $_POST['email'];
-	    echo $email;
+
 	    
     <div class="w3-container w3-deep-orange w3-center">
 		<h2>Usuario</h2>
