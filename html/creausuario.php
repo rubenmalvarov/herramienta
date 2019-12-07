@@ -24,7 +24,7 @@
                 </div>
                 
                 <div class="w3-row w3-section">
-                    <textarea name = "resumen" rows = 1 cols = 30> ¿Cual es el problema?</textarea> 
+                    <textarea name = "email" rows = 1 cols = 30> ¿Cual es el problema?</textarea> 
                 </div>
                 
                 <div class="w3-container w3-deep-orange">
@@ -33,8 +33,21 @@
                 
              
                 <div class="w3-row w3-section">
-                    <textarea name = "descripcion" rows = 1 cols = 15> Describe el problema </textarea>
+                    <textarea name = "contrasena" rows = 1 cols = 15> Describe el problema </textarea>
                 </div>
+		
+		<div class="w3-row w3-section">
+                    <textarea name = "nombre" rows = 1 cols = 15> Describe el problema </textarea>
+                </div>
+			
+		<div class="w3-row w3-section">
+                    <textarea name = "apellido1" rows = 1 cols = 15> Describe el problema </textarea>
+                </div>
+			
+		<div class="w3-row w3-section">
+                    <textarea name = "apellido2" rows = 1 cols = 15> Describe el problema </textarea>
+                </div>
+			
                 <div class="w3-row w3-section">
                     <p><input type = submit value = "Crear"class="w3-btn w3-deep-orange w3-round-xlarge" /> 
                 </div>
