@@ -20,9 +20,9 @@
 		              <h2>Introduzca el número de incidencia</h2>
                 </div>
         
-        <form action="consultaadm.php" method="post">
+        <form action="consultausr.php" method="post">
                 <div class="w3-row w3-section ">
-                    <textarea name = "id" rows = 1 cols = 10> INCxxxxx </textarea> 
+                    <textarea name = "id" rows = 1 cols = 10> 0 </textarea> 
                 
                     <p><input type = submit value = "Consultar incidencia"class="w3-btn w3-deep-orange w3-round-xlarge" style="width:25%"/> 
                 </div>
@@ -35,7 +35,6 @@
     
         <br>
         <a href="index.html" class="w3-button w3-deep-orange w3-round-xlarge" style="width:25%">Cerrar sesión</a>
-
         <br>
         <br>
 	   <footer>
@@ -43,7 +42,6 @@
 		<h4>Álvaro Vicente y Rubén Martín TFG</h4>
 	   </div>
 	   </footer>
-
        
     </body>   
 </html>
