@@ -20,7 +20,7 @@
 		              <h2>Introduzca el número de incidencia</h2>
                 </div>
         
-        <form action="consultausr.php" method="post">
+        <form action="consultaadm.php" method="post">
                 <div class="w3-row w3-section ">
                     <textarea name = "id" rows = 1 cols = 10> 0 </textarea> 
                 
