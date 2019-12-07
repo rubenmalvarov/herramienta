@@ -35,12 +35,16 @@
             		$categoria = $_POST['categoria'];
             		$resumen = $_POST['resumen'];
                     	$descripcion = $_POST['descripcion'];
-            
+            		$fh = fopen("temp.txt", 'r');
+			$email2 = fgets($fh);
+			fclose($fh);
 			/* $consulta = "SELECT contrasena, privilegio FROM usuarios where email = '$email'"; */
-			
-			
+			echo $categoria;
+			echo $resumen;
+			echo $descripcion;
+			echo $email2;
             		// Realizamos la inserción en la BBDD
-            		$insertar= "INSERT INTO incidencias ( categoria, resumen, descripcion ) VALUES ('$categoria','$resumen,'$descripcion')";
+            		//$insertar= "INSERT INTO incidencias ( categoria, resumen, descripcion ) VALUES ('$categoria','$resumen,'$descripcion')";
             
 			/* $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos"); */
         
@@ -54,19 +58,6 @@
 			//echo $privilegio;
             		
 			//Si la inserción a funcionado muestra mensaje
-			if (mysqli_query($conexion, $insertar)) 
-			{
-            			echo "<div class='w3-container w3-deep-orange w3-center'>
-		             	<h2>Su incidencia se a guardado correctamente</h2>
-                         	</div>"; 
-                	
-            		else 
-                	{ 
-               			echo "<div class='w3-container w3-deep-orange w3-center'>
-		              	<h2>Error al ejecutar la inserción</h2>
-                         	</div>";
-			}
-			}
 			?>
 			
 		</div>
