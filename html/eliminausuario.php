@@ -29,18 +29,28 @@
 			$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 			
 			// Y la mostramos en PHP
-            echo "<form action='borrausuario.php' method='post'>";
+           
+	 echo "<form action='borrausuario.php' method='post'>";
             echo "<div class='w3-row w3-section'>";
-            echo "<select class='w3-select w3-border' name='categoria'>";
+            echo "<div class='w3-container w3-deep-orange'>";
+	    echo "<label class='w3-deep-orange'>Selecciona el usuario a eliminar</label>";
+		echo "</div>";
+		echo "<select class='w3-select w3-border' name='elim'>";
+		echo "<option value='' disabled selected>Selecciona un usuario</option>";
 			while ($fila = mysqli_fetch_array( $resultado ))
 			{
                 $id=$fila[idusuario];
                 $nom=$fila[nombre];
                 $ape=$fila[ape1];
-                echo "<option value=$id>.$nom.' '.$ape.</option>";
+                echo "<option value=$id>$nom $ape</option>";
 			}
 	       	echo "</select>";
             	echo "</div>";
+		echo "<div class='w3-row w3-deep-section'>";
+		echo "<p>";
+		echo "<input type='submit' value='Eliminar' class='w3-btn w3-deep-orange w3-round-xlarge'>";
+		echo "</p>";
+		echo "</div>";
            	echo "</form>";
 			?>
 	</body>
