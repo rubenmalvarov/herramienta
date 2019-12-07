@@ -58,7 +58,7 @@
         </form>
         
         </div>
-                
+               
                  <!-- Pie de página y enlace a Login. -->
     
         <br>
@@ -72,7 +72,7 @@
 	   </div>
 	   </footer>
 
-       
+      
     </body>    
         
         
