@@ -17,9 +17,9 @@
 			// Creamos las variables con los datos necesarios para el acceso a la BBDD.
 			
 			$bdservidor = "192.168.100.10";	  	// Nombre del servidor
-			$bdusuario	= "root";		// Usuario de la BBDD
+			$bdusuario	= "root";		        // Usuario de la BBDD
 			$bdcontrasena	= "clase1234";		// Contraseña
-			$bdnombre	= "tfg";    	  	// Nombre de la BBDD
+			$bdnombre	= "tfg";    	  	    // Nombre de la BBDD
 			
 			// Creamos la conexión con el servidor de la BBDD
 			$conexion = mysqli_connect($bdservidor, $bdusuario, $bdcontrasena ) or die ("No se pudo conectar a la BBDD");
@@ -29,57 +29,41 @@
 			
 			// --------------------------------------------
 			
-			
-			
 			//Recabamos datos recibidos del formulario vía POST
             $id = $_POST['id'];
-            
-			$consulta = "SELECT categoria, resumen, descripcion FROM incidencias where id = '$id'";
+            //echo $id;
+			$consulta = "SELECT categoria, resumen, descripcion, estado FROM incidencias where idincidencia = '$id'";
+			$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+            //echo $resultado;
 			
-			
-            		// Realizamos la inserción en la BBDD
-            		// $insertar= "INSERT INTO incidencias ( categoria, resumen, descripcion ) VALUES ('$categoria','$resumen,'$descripcion')";
-            
-			/* $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos"); */
-        
-			
-            		// MUETRA CONTRASENA
-			//$contra1=mysqli_fetch_row($resultado);
-			//$contra= $contra1[0];
-			//$privilegio= $contra1[1];
-			//echo $contrasena;
-			//echo $contra;
-			//echo $privilegio;
+            // MUESTRA CONTRASENA
+			$resultadolinea=mysqli_fetch_row($resultado);
+			$categoria= $resultadolinea[0];
+			$resumen= $resultadolinea[1];
+			$descripcion= $resultadolinea[2];
+            $estado= $resultadolinea[3];
+			//echo $categoria;
+			//echo $resumen;
+			//echo $descripcion;
             		
-			//Si la inserción a funcionado muestra mensaje
-            $resultado = mysqli_query( $conexion, $consulta );
+			    echo "<div class='w3-container w3-deep-orange w3-center'>";
+		        echo "<h2>Resumen incidencia</h2>";
+				echo "</div>";
             
-			if (mysqli_query($conexion, $consulta)) 
-			{
-            		while ($resultadoarray = mysqli_fetch_array( $resultado ))
-			         {
-				        echo "<div class='w3-container w3-deep-orange w3-center'>
-		             	<h2>Resumen incidencia</h2> </div>";
-                            
-				        echo "<div class='w3-container w3-deep-orange w3-center'>" . $resultadoarray['resumen'] . "</div>";
-                        
-                        
-				        echo "<div class='w3-container w3-deep-orange w3-center'>
-		             	<h2>Descripción de la incidencia</h2> </div>";
-                            
-				        echo "<div class='w3-container w3-deep-orange w3-center'>" . $resultadoarray['descripcion'] . "</div>";
-			         }
-             
-                	
-            		else 
-                	{ 
-               			echo "<div class='w3-container w3-deep-orange w3-center'>
-		              	<h2>Algo salió mal en la consulta a la BBDD</h2>
-                         	</div>";
-			}
-			}
-	
-			?>
+				echo "<div class='w3-container w3-center'>".$resumen."</div>";
+            
+				echo "<div class='w3-container w3-deep-orange w3-center'>";
+		        echo "<h2>Descripción de la incidencia</h2>";
+				echo "</div>"; 
+            
+				echo "<div class='w3-container w3-center'>" .$descripcion. "</div>";
+			  
+                echo "<div class='w3-container w3-deep-orange w3-center'>";
+		        echo "<h2>Estado de la incidencia</h2>";
+				echo "</div>"; 
+            
+				echo "<div class='w3-container w3-center'>" .$estado. "</div>";
+      			?>
 			
 		</div>
 </body>
