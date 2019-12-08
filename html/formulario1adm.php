@@ -31,7 +31,7 @@
         
     <br><br>
     
-        <a href="basedeconocimientos.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Base de conocimientos</a>
+        <a href="administracionbc.php" class="w3-button w3-deep-orange w3-center w3-round-xlarge" style="width:50%">Base de conocimientos</a>
    
     <br><br>
     
