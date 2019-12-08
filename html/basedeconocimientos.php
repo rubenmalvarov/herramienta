@@ -16,7 +16,7 @@
     
     <!-- Contenedor principal -->     
     <div class="w3-container w3-card-4 w3-light-grey w3-margin">
-    		<form action="autenticacion.php" method="post">
+    		<form action="seleccionbc.php" method="post">
                 <div class="w3-container w3-deep-orange w3-center">
 		              <h2>Selecciona una categoría de tipología de incidencias</h2>
                 </div>
@@ -33,7 +33,6 @@
                 <p><input type = submit value = "seleccionar"class="w3-btn w3-deep-orange w3-round-xlarge" /> 
                 <input type = reset value = "Cancelar" class="w3-btn w3-deep-orange w3-round-xlarge"/></p> 
                 
-		      <a href="formuario1adm.php" class="w3-button w3-deep-orange w3-round-xlarge" style="width:50%">Volver a consola de administrador</a>
              <br>
             <br>
         </form>
