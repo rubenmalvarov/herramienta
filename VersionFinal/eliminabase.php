@@ -24,7 +24,7 @@
 			// Ahora hay que conectarse a la BBDD.
 			$bd = mysqli_select_db( $conexion, $bdnombre ) or die ("Esa BBDD no existe compañero");	
 			
-			//Probamos con una consulta sencillita
+			//Consulta para que muestre todos los registros
 			$consulta = "SELECT idbc, nombre FROM basecon";
 			$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 			
