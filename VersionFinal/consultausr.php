@@ -48,29 +48,25 @@
 			die ("Esta incidencia no es tuya o no existe");
 			}
 			//Recabamos datos recibidos del formulario vía POST
-            //echo $id;
+       
 			$consulta = "SELECT categoria, resumen, descripcion, estado FROM incidencias where idincidencia = '$id'";
 			$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-            //echo $resultado;
-			
-            // MUESTRA CONTRASENA
+          
 			$resultadolinea=mysqli_fetch_row($resultado);
 			$categoria= $resultadolinea[0];
 			$resumen= $resultadolinea[1];
 			$descripcion= $resultadolinea[2];
-            $estado= $resultadolinea[3];
-			//echo $categoria;
-			//echo $resumen;
-			//echo $descripcion;
+            		$estado= $resultadolinea[3];
+			
             		
-			    echo "<div class='w3-container w3-deep-orange w3-center'>";
-		        echo "<h2>Resumen incidencia</h2>";
+			    	echo "<div class='w3-container w3-deep-orange w3-center'>";
+		        	echo "<h2>Resumen incidencia</h2>";
 				echo "</div>";
             
 				echo "<div class='w3-container w3-center'>".$resumen."</div>";
             
 				echo "<div class='w3-container w3-deep-orange w3-center'>";
-		        echo "<h2>Descripción de la incidencia</h2>";
+		        	echo "<h2>Descripción de la incidencia</h2>";
 				echo "</div>"; 
             
 				echo "<div class='w3-container w3-center'>" .$descripcion. "</div>";
