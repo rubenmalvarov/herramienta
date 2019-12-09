@@ -35,7 +35,7 @@
 			
 			$cate = $_POST['categoria'];
 
-			//Probamos con una consulta sencillita
+			//Consulta con la variable seleccionada en formulario anterior
 			$consulta = "SELECT idbc, nombre FROM basecon WHERE categoria='$cate'";
 			$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 			
