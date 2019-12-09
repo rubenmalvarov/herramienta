@@ -34,21 +34,21 @@
 			// --------------------------------------------
 			
 			//Recabamos datos recibidos del formulario vía POST
-            $id = $_POST['id'];
-            //echo $id;
+            		$id = $_POST['id'];
+           
 			$consulta = "SELECT categoria, resumen, descripcion, estado FROM incidencias where idincidencia = '$id'";
 			$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-            //echo $resultado;
+        
 			
-            // MUESTRA CONTRASENA
+       
 			$resultadolinea=mysqli_fetch_row($resultado);
 			$categoria= $resultadolinea[0];
 			$resumen= $resultadolinea[1];
 			$descripcion= $resultadolinea[2];
-            $estado= $resultadolinea[3];
-			//echo $categoria;
-			//echo $resumen;
-			//echo $descripcion;
+            		$estado= $resultadolinea[3];
+			
+			//Se muestran en la página web
+			
             		echo "<div class='w3-container w3-card-4 w3-light-grey w3-margin w3-center'>";
 			    echo "<div class='w3-container w3-deep-orange w3-center'>";
 		        echo "<h2>Resumen incidencia</h2>";
