@@ -39,21 +39,18 @@
 			$email2 = fgets($fh);
 			fclose($fh);
 			$consulta1 = "SELECT idusuario FROM usuarios where email = '$email2'";
-			//echo $categoria;
-			//echo $resumen;
-			//echo $descripcion;
-			//echo $email2;
-            
+            		//Tras recoger los datos de email por el archivo se realiza consulta para conseguir el mail actual.
 			$resultado1 = mysqli_query( $conexion, $consulta1 ) or die ( "Algo ha ido mal en la consulta a la base de datos");
         
 			$idusu=mysqli_fetch_row($resultado1);
 			$idusu1 = $idusu[0];
-			//echo $idusu1;
+			
             		// Realizamos la inserción en la BBDD
             		$insertar= "INSERT INTO incidencias (idusuario, categoria, resumen, descripcion, fcreacion, estado) VALUES ('$idusu1', '$categoria', '$resumen', '$descripcion', NOW(), 'En curso')";
 			$resultado2 = mysqli_query( $conexion, $insertar ) or die ( "Algo ha ido mal en la creacion de la incidencia");
 			echo "<div class='w3-container w3-center'>";
 			
+			//Utilizamos este bloque de código para indicar el número de incidencia del nuevo registro
 			$consulta3 = "SELECT idusuario, resumen, idincidencia FROM incidencias WHERE idusuario='$idusu1' AND resumen='$resumen'";
 			$resultado3 = mysqli_query( $conexion, $consulta3 );
 			$comprobar=mysqli_fetch_row($resultado3);
@@ -68,11 +65,7 @@
 			
 			echo "<a href='formulario1adm.php' class='w3-button w3-round-xlarge w3-deep-orange w3-center style='width:50%'>Volver al menú anterior</a>";
 			echo "</div>";
-              		//$privilegio= $contra1[1];
-			//echo $contrasena;
-			//echo $contra;
-			//echo $privilegio;
-			//Si la inserción a funcionado muestra mensaje
+              		
 			?>
 			
 		</div>
