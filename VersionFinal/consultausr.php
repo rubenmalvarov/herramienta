@@ -81,16 +81,12 @@
             
 				echo "<div class='w3-container w3-center'>" .$estado. "</div>";
 			echo "<br>";
-	echo "<form action='resolver.php' method='post'>";
-		echo "<input name='id' type='hidden' value='$id'>";
-		echo "<input type = submit value = 'Cambiar estado a resuelta' class='w3-button w3-deep-orange w3-round-xlarge' style='width:25%'>";
 		echo "<br>";
 		echo "<br>";
 		echo "</div>";
 		echo "<br>";
-		echo "<a href='formulario1adm.php' class='w3-button w3-round-xlarge w3-deep-orange w3-center style='width:50%'>Volver al menú anterior</a>";
-				
-		echo "</form>";
+		echo "<a href='formulario1usr.php' class='w3-button w3-round-xlarge w3-deep-orange w3-center style='width:50%'>Volver al menú anterior</a>";
+		
 		echo "</div>";
       			?>
 			
