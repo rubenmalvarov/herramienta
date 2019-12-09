@@ -55,7 +55,7 @@
 			$email2 = fgets($fh);
 			fclose($fh);
 			
-			//Probamos con una consulta sencillita
+			//Consulta de incidencias solo creadas por el usuario
 			$consultausu = "SELECT idusuario FROM usuarios WHERE email='$email2'";
 			$resultadousu = mysqli_query( $conexion, $consultausu ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 			$resultadousu2 = mysqli_fetch_row($resultadousu);
