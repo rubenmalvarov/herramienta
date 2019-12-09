@@ -33,17 +33,13 @@
 			
 			//Recabamos datos recibidos del formulario vía POST
             		$id = $_POST['id'];
-            		// Realizamos la inserción en la BBDD
+            		// Modificamos estado a resuelto
             		$resolver = "UPDATE incidencias SET estado='Resuelta' WHERE idincidencia='$id'";
 			$resultado = mysqli_query( $conexion, $resolver ) or die ( "No se ha podido resolver la incidencia");
 			echo "<div class='w3-container w3-center'>";
 			echo "<a href='formulario1adm.php' class='w3-button w3-round-xlarge w3-deep-orange w3-center style='width:50%'>Volver al menú anterior</a>";
 			echo "</div>";
-              		//$privilegio= $contra1[1];
-			//echo $contrasena;
-			//echo $contra;
-			//echo $privilegio;
-			//Si la inserción a funcionado muestra mensaje
+              		
 			?>
 			
 		</div>
