@@ -39,14 +39,13 @@
 			$fh = fopen("temp.txt", 'w');
 			fwrite($fh, $email);
 			fclose($fh);
-            		// MUETRA CONTRASENA
+			
+            		// Guardamos el resultado de la consulta en una fila y ambos campos de la misma en variables
 			$contra1=mysqli_fetch_row($resultado);
 			$contra= $contra1[0];
 			$privilegio= $contra1[1];
-			//echo "<p>Contra POST </p>".$contrasena;
-			//echo "<p>Contra select </p>".$contra;
-			//echo $privilegio;
-			//if ( $contrasena == $contra )
+			
+			//Realizamos la condición para derivar si es administrador o no
 			if (password_verify($contrasena,$contra))
             		{
                			 // echo "<p> Bien </p>";
