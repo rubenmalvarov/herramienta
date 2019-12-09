@@ -45,7 +45,6 @@
     
     <br>
     <a href="index.html" class="w3-button w3-deep-orange w3-round-xlarge" style="width:25%">Cerrar sesión</a>
-
     <br>
     <br>
 	<footer>
