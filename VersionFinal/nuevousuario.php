@@ -42,15 +42,6 @@
         	        $apellido2 = $_POST['apellido2'];
                 	$privilegios = $_POST['permisos'];
       			$contrahash = password_hash($contrasena, PASSWORD_BCRYPT);
-		//	echo $contrahash;
-		//	$consulta1 = "SELECT idusuario FROM usuarios where email = '$email2'";
-		//	echo $email;
-		//	echo $contrasena;
-		//	echo $nombre;
-		//	echo $apellido1;
-      		//	echo $apellido2;
-      		//	echo $privilegios;
-            		// Realizamos la inserción en la BBDD
 
             		$insertar= "INSERT INTO usuarios (contrasena, nombre, ape1, ape2, email, privilegio) VALUES ('$contrahash', '$nombre', '$apellido1', '$apellido2', '$email', '$privilegios')";
 			$resultado1 = mysqli_query( $conexion, $insertar ) or die ("Algo ha ido mal en la creacion del usuario");
