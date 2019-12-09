@@ -35,10 +35,8 @@
             		$categoriabc = $_POST['categoria'];
 			$nombrebc = $_POST['nombre'];
             		$solucionbc = $_POST['solucion'];
-			//echo $categoriabc;
-			//echo $nombrebc;
-			//echo $solucionbc;
-            		//Realizamos la inserción en la BBDD
+			
+			// Se realiza la inserción
             		$insertar= "INSERT INTO basecon (nombre, solucion, categoria) VALUES ('$nombrebc', '$solucionbc', '$categoriabc')";
 			$resultado2 = mysqli_query( $conexion, $insertar ) or die ( "Algo ha ido mal en la creacion");
 			echo "<div class='w3-container w3-center'>";
