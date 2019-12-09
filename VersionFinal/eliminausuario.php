@@ -24,24 +24,24 @@
 			// Ahora hay que conectarse a la BBDD.
 			$bd = mysqli_select_db( $conexion, $bdnombre ) or die ("Esa BBDD no existe compañero");	
 			
-			//Probamos con una consulta sencillita
+			//Consulta de todos los usuarios
 			$consulta = "SELECT idusuario, nombre, ape1 FROM usuarios";
 			$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 			
 			// Y la mostramos en PHP
            
-	 echo "<form action='borrausuario.php' method='post'>";
-            echo "<div class='w3-row w3-section'>";
-            echo "<div class='w3-container w3-deep-orange'>";
-	    echo "<label class='w3-deep-orange'>Selecciona el usuario a eliminar</label>";
+	 	echo "<form action='borrausuario.php' method='post'>";
+            	echo "<div class='w3-row w3-section'>";
+            	echo "<div class='w3-container w3-deep-orange'>";
+	    	echo "<label class='w3-deep-orange'>Selecciona el usuario a eliminar</label>";
 		echo "</div>";
 		echo "<select class='w3-select w3-border' name='elim'>";
 		echo "<option value='' disabled selected>Selecciona un usuario</option>";
 			while ($fila = mysqli_fetch_array( $resultado ))
 			{
-                $id=$fila[idusuario];
-                $nom=$fila[nombre];
-                $ape=$fila[ape1];
+                		$id=$fila[idusuario];
+                		$nom=$fila[nombre];
+                		$ape=$fila[ape1];
                 echo "<option value=$id>$nom $ape</option>";
 			}
 	       	echo "</select>";
